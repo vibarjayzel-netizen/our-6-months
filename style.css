@@ -1,0 +1,116 @@
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(135deg, #ffeef2 0%, #ffd1dc 100%);
+    font-family: 'Inter', sans-serif;
+    color: #4a3b40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Soft, Aesthetic Letter Container */
+.letter-container {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    max-width: 600px;
+    width: 100%;
+    padding: 50px 40px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(255, 182, 193, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    position: relative;
+    z-index: 10;
+}
+
+.date {
+    font-size: 0.9rem;
+    color: #a38a95;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.2rem;
+    color: #d15b76;
+    margin-bottom: 30px;
+    line-height: 1.3;
+}
+
+.letter-body p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    text-align: justify;
+    color: #5c4a51;
+}
+
+/* Subtle accent text */
+.highlight {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8rem;
+    color: #d15b76;
+    text-align: center !important;
+    margin: 30px 0 !important;
+    font-weight: bold;
+}
+
+.signature {
+    margin-top: 40px;
+    text-align: right;
+}
+
+.signature p {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #a38a95;
+}
+
+.signature .name {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.3rem;
+    color: #d15b76;
+    margin-top: 5px;
+}
+
+/* Floating aesthetic background elements */
+.background-hearts span {
+    position: absolute;
+    font-size: 24px;
+    opacity: 0.2;
+    animation: float 6s ease-in-out infinite;
+}
+
+.background-hearts span:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+.background-hearts span:nth-child(2) { top: 20%; right: 12%; animation-delay: 1.5s; }
+.background-hearts span:nth-child(3) { bottom: 15%; left: 8%; animation-delay: 3s; }
+.background-hearts span:nth-child(4) { bottom: 25%; right: 15%; animation-delay: 4.5s; }
+.background-hearts span:nth-child(5) { top: 50%; left: 5%; animation-delay: 2s; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(15deg); }
+}
+
+/* Responsive adjustments for phones */
+@media (max-width: 480px) {
+    .letter-container {
+        padding: 30px 20px;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+    .letter-body p {
+        font-size: 0.98rem;
+    }
+}
